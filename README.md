@@ -29,7 +29,7 @@ This project is a web application built with React.js that allows users to back 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/spotify-playlist-backup.git
+   git clone https://github.com/zsh28/Spotify-Playlist-Backup-Service-Challenge.git
    cd spotify-playlist-backup
    ```
 
