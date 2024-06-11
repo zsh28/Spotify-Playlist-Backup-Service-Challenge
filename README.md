@@ -39,7 +39,7 @@ This project is a web application built with React.js that allows users to back 
    npm install
    ```
 
-3. Create a `.env.local` file in the root of the project and add your Spotify API credentials:
+3. Create a `.env` file in the root of the project and add your Spotify API credentials:
 
    ```bash
    REACT_APP_SPOTIFY_CLIENT_ID=your_spotify_client_id
