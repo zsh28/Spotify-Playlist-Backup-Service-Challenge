@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Spotify Playlist Backup Service
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application built with React.js that allows users to back up their Spotify playlists. Users can log in with their Spotify account, view their playlists, select a playlist to back up, and export the playlist data to a CSV file.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Spotify Authentication**: Securely log in with your Spotify account to access your playlists.
+- **Fetch Playlists**: Retrieve and display all your Spotify playlists.
+- **Fetch Playlist by ID**: Enter a playlist ID to fetch and display a specific playlist.
+- **Export to CSV**: Export the selected playlist's details (track name, artist, album) to a CSV file for backup.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React.js**: A JavaScript library for building user interfaces.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **FileSaver**: A library to save files on the client-side.
+- **Spotify Web API**: The API used to fetch playlists and track details.
+- **Papaparse**: A powerful CSV library for parsing and generating CSV files.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 
+- A Spotify Developer account
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/your-username/spotify-playlist-backup.git
+   cd spotify-playlist-backup
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Create a `.env.local` file in the root of the project and add your Spotify API credentials:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   REACT_APP_SPOTIFY_CLIENT_ID=your_spotify_client_id
+   REACT_APP_SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+   REACT_APP_SPOTIFY_REDIRECT_URI=http://localhost:3000/
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Start the development server:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm run start
+   ```
 
-## Learn More
+5. Open your browser and navigate to `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Log in with your Spotify account.
+2. Use the input field to enter a playlist ID and fetch the playlist details.
+3. Alternatively, select a playlist from the dropdown menu to fetch its details.
+4. Click the "Export to CSV" button to download the playlist details as a CSV file.
